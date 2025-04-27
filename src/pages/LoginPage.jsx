@@ -5,6 +5,10 @@ const LoginPage = ({ onLoginSuccess }) => {
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
+  // Version and Build Number
+  const version = "1.0.0";  // Version number
+  const buildNumber = "123"; // Build number
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -92,6 +96,13 @@ const LoginPage = ({ onLoginSuccess }) => {
             font-size: 0.9rem;
             color: #666;
           }
+
+          .footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #999;
+            text-align: center;
+          }
         `}
       </style>
 
@@ -121,6 +132,11 @@ const LoginPage = ({ onLoginSuccess }) => {
           {errorMessage && <p className="error-message">{errorMessage}</p>}
 
           <p className="note">Use any email, but the password must be "12345".</p>
+          
+          {/* Footer with Version and Build number */}
+          <div className="footer">
+            <p>Version: {version} | Build: {buildNumber}</p>
+          </div>
         </div>
       </div>
     </>
