@@ -7,7 +7,7 @@ const LoginPage = ({ onLoginSuccess }) => {
 
   // Version and Build Number
   const version = "1.0.0";  // Version number
-  const buildNumber = "123"; // Build number
+  const buildNumber = "002"; // Build number
 
   const handleSubmit = (e) => {
     e.preventDefault();
